@@ -1,0 +1,14 @@
+# Build files
+build/
+.gradle/
+
+# IDE files
+.idea/
+*.iml
+
+# Log files
+*.log
+
+# Compiled files
+*.class
+*.jar
