@@ -20,7 +20,7 @@ dependencies {
     compileOnly 'org.projectlombok:lombok' //롬복
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.21.0'
-
+    implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
 }
 
 test {
