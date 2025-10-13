@@ -25,17 +25,6 @@ public class Article {
     @Column(name = "content", nullable = false)
     private String content;
 
-    @Builder
-    public Article(String title, String content) {
-        this.title = title;
-        this.content = content;
-    }
-
-    public void update(String title, String content) {
-        this.title = title;
-        this.content = content;
-    }
-
     @CreatedDate
     @Column(name = "created_at")
     private LocalDateTime createdAt;
@@ -43,4 +32,20 @@ public class Article {
     @LastModifiedDate
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
+
+    @Column(name = "author", nullable = false)
+    private String author;
+
+    @Builder
+    public Article(String author, String title, String content) {
+        this.author = author;
+        this.title = title;
+        this.content = content;
+    }
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 }
+
+
